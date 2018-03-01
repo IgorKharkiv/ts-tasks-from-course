@@ -1,5 +1,4 @@
 import * as testModule from './index';
-import { TestClass } from './index';
 
 describe('isInArray', () => {
   it('should return true if all elements exist in the array', () => {
