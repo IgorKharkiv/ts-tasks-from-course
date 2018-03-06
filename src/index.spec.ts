@@ -1,4 +1,5 @@
 import * as testModule from './index';
+import { parseString } from './index';
 
 describe('isInArray', () => {
   it('should return true if all elements exist in the array', () => {
@@ -49,5 +50,12 @@ describe('getReversedString', () => {
     expect(result_2).toEqual('t1ra$%t3s 2 wol^leh');
     const result_3 = testModule.getReversedString(testCase_3);
     expect(result_3).toEqual('t1rat3s 2   wol5');
+  });
+});
+
+describe('getReversedString', () => {
+  it('azazazaz', () => {
+    const result = testModule.parseString('zzzaabqqqwwweeeerrt');
+    expect(result).toEqual('3z2a1b3q3w4e2r1t');
   });
 });

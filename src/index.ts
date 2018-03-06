@@ -49,3 +49,26 @@ export function getReversedString(sentence: string): string {
   });
   return reversedSentenceArr.join(' ');
 }
+
+export function parseString(string:string): string {
+  let previousSymbol: string = string[0];
+  let counter: number = 0;
+  let result: string = '';
+  const resultArr = [];
+  string.split('').forEach((symbol, index) => {
+    if(symbol === previousSymbol) {
+      counter++;
+      if(index === string.length - 1){
+        resultArr.push(`${counter}${previousSymbol}`);
+      }
+    } else {
+      resultArr.push(`${counter}${previousSymbol}`);
+      counter = 1;
+      previousSymbol = symbol;
+      if(index === string.length - 1){
+        resultArr.push(`${counter}${previousSymbol}`);
+      }
+    }
+  });
+  return resultArr.join('');
+};
