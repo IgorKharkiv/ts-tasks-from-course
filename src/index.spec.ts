@@ -54,7 +54,7 @@ describe('getReversedString', () => {
 });
 
 describe('getReversedString', () => {
-  it('azazazaz', () => {
+  it('should return a string in with overlapping of symbols', () => {
     const result = testModule.parseString('zzzaabqqqwwweeeerrt');
     expect(result).toEqual('3z2a1b3q3w4e2r1t');
   });
